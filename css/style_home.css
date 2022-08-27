@@ -1,0 +1,25 @@
+:root{
+    --cor-texto: black;
+}
+
+body {
+    font-family: 'Silkscreen', cursive;
+}
+
+.div_home {
+    position: relative;
+    margin: 0 auto;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{    
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.img_home{    
+    width: 90%;
+}
