@@ -1,25 +1,90 @@
-:root{
-    --cor-texto: black;
+:root{ /* instanciei algumas variaveis para utiliza-la em qualquer momento e facilitar a manutencao de codigo*/
+    --cor-texto: black; /*atribuir a uma variavel o vlaor da cor preta*/
+    --cor-background-header:#BBBBBB;/*atribuindo uma variavel a cor cinza*/
+    --fonte-destaque: 'Silkscreen', cursive;
 }
 
-body {
-    font-family: 'Silkscreen', cursive;
+/*CABECALHO*/
+header{
+    background-color: var(--cor-background-header);/*atribui o valor de fundo do cabecalho de cinza*/
+    padding: 30px 0;/*coloquei um espaçamento interno para meus objetos ficarem centralizados*/
 }
 
-.div_home {
-    position: relative;
-    margin: 0 auto;
+.caixa{
+    width: 1050px;/*coloquei o tamanho da minha pagina nesse vlaor*/
+    position: relative;/*colocando o posicionamento como relativo agora os itens vao se basear n aminha caixa para serem exibidos*/
+    margin: 0 auto;/*ajustei a margem para o tamanho da minha pagina tenha o mesmo tamanho dos dois lados*/
+}
+
+.img_header{
+    border-radius: 3em;/*coloquei uma borda da minha imagem para ficar mais apresentavel*/
+}
+
+nav {
+    font-family: var(--fonte-destaque);/*estou mudando a fonte dos links das outras paginas*/
+    position: absolute;/*estou falando que o posicionamento desses links é absoluto, agora ele n faz mais parte
+    do cabecalho, e é so eu decidir aonde vou colocar ele*/
+	top: 70px;/*aqui e informo que a distancia dele pro top vai ser de 110px*/
+	right: 0;/*e aqui a distancia dele para a direita sera de 0*/
 }
 
 nav li{
-    display: inline;
+    display: inline;/*coloquei todos os itens da lista em linha para eles n ocuparem a tela inteira*/
+    margin: 0 0 0 15px;/*adicionei 15px de margens a esquerda, isso funciona igual o relogio, cima, direita, baixo e esquerda*/
 }
 
 nav a{    
-    text-decoration: none;
-    color: var(--cor-texto);
+    text-decoration: none; /*tirar a decoracao do texto, como links*/
+    color: var(--cor-texto); /*atribuir a cor do texto a essa variavel*/
+    font-size: 25px;/*colocar o tamanho do texto no tamanho que eu quero*/
+    text-transform: uppercase;/*transformar todo o texto em uppercase*/
+    font-weight: bold;/*transformar o texto em negrito*/    
+}
+/*FIM CABECALHO*/
+
+/*CONTEUDO PRINCIPAL*/
+.conteudo_principal{
+    padding: 10px 170px 10px 170px;/*coloquei um espaçamento externo para ficar mais organizado*/
+}
+.mais_vistos{
+    font-size: 1.5rem;/*aumentei o tamanho da fonte deste titulo para ficar em destaque*/
+    padding: 2em 0;/*coloquei uma espacamento externo para melhorar a visao e separar cada item*/
+    font-family: var(--fonte-destaque);/*alterei o modelo de fonte para ficar mais bonito*/
 }
 
-.img_home{    
-    width: 90%;
+.lista_mais_vistos{
+    width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
 }
+
+.lista_mais_vistos li{
+    display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 0;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+}
+
+.produto_imagem{
+    width: 33%;/*coloquei para a imagem ter 100% do tamanho do meu cartao*/
+    border-radius: 15px;/*ajustado para a imagem ficar arredondado*/
+    padding: 10px;
+}
+
+.produto_titulo{
+    font-size: 1.5rem;/*aumentei o tamanho da fonte do produto para destaque*/
+    padding: 10px 0 10px 0;
+}
+
+.produto_descricao{
+}
+
+.produto_titulo, .produto_descricao{
+    color: var(--cor-texto);/*mudei a cor dos textos de dentro do cartão para serem melhor exibidos*/
+}
+/*FIM CONTEUDO PRINCIPAL*/
